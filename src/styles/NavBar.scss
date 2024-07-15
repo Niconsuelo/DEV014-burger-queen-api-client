@@ -1,4 +1,50 @@
+@import "../App.scss";
 
-.containerNav{
+.containerNav {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
 
+.optionNav {
+  height: 80px;
+  width: 100%;
+  background-color: $third-color;
+  margin: 100px 0px 0px 0px;
+  border-color: $secundary-color;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  color: $secundary-color;
+  text-align: center;
+  cursor: pointer;
+}
+
+.optionNav:hover {
+  background-color: $background-primary-color;
+  transition: background-color 0.3s ease;
+  color: $primary-color;
+  font-weight: bolder;
+}
+
+.optionSelect {
+  background-color: $background-primary-color;
+  height: 80px;
+  width: 100%;
+  margin: 100px 0px 0px 0px;
+  border-style: solid;
+  border-color: $secundary-color;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.textSelect {
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  margin: 22px 0px 0px 0px;
 }
