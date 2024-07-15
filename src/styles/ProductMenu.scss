@@ -1,0 +1,23 @@
+@import "../App.scss";
+
+.containerElectionMenu {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerMenu {
+  width: 512px;
+  height: 434px;
+  background-image: url("https://i.ibb.co/Q8vrsp3/Vintage-Retro-Delicious-Burger-Food-Logo-3.png");
+  background-size: cover;
+  border-color: $secundary-color;
+  border-style: solid;
+  border-radius: $border-radius-primery;
+  margin-top: auto;
+
+  @include desktop {
+    width:580px;
+  }
+}
+
+
