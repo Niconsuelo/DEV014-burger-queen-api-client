@@ -1,0 +1,16 @@
+.containerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.logoImg {
+  background-image: url("../assets/2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+  width: 600px;
+}
