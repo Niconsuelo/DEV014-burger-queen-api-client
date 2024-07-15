@@ -1,0 +1,13 @@
+$primary-color: white;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.buttonLogin{
+    height: 50px;
+    width: 170px;
+    border-radius: 10px;
+    margin: 10px 0px 30px 220px;
+    align-items: center;
+    background-color: #017F9B;
+    color: $primary-color;
+    font-size: 18px;
+  }
