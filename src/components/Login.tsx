@@ -1,5 +1,7 @@
 import "../styles/Login.scss";
 import ButtonAccess from "./ButtonAccess";
+import InputText from "./InputText";
+import '../styles/InputText.scss';
 
 const Login: React.FC = () => {
   return (
@@ -9,18 +11,10 @@ const Login: React.FC = () => {
       <div>
         <div className="textColor loginText"> INICIAR SESIÓN</div>
         <div className="loginLine"></div>
-        <p>INGRESE CORREO ELÉCTRONICO</p>
-        <input
-          type="text"
-          placeholder="Correo electrónico"
-          className="inputLogin"
-        />
-        <p>INGRESE CONTRASEÑA</p>
-        <input
-          type="text"
-          placeholder="Correo electrónico"
-          className="inputLogin"
-        />
+        <p className="textLogin">INGRESE CORREO ELÉCTRONICO</p>
+        <InputText/>
+        <p className="textLogin">INGRESE CONTRASEÑA</p>
+        <InputText/>
        <ButtonAccess/>
       </div>
     </div>
