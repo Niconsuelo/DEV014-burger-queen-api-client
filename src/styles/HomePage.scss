@@ -1,4 +1,5 @@
-@import "../Styles/mixin.scss";
+@import "../styles/mixin.scss";
+@import '../App.scss';
 
 body{
   background-image: url("https://i.ibb.co/dBGh4yg/Bold-Black-and-White-Online-Sale-Black-Friday-Instagram-Post.png");
@@ -7,10 +8,9 @@ body{
 }
 
 .homeText {
-  color: white;
-  font-size: 12px;
+  color: $text-primary-color;
+
 
   @include desktop {
-    font-size: 42px;
   }
 }
