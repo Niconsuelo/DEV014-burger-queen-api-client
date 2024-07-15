@@ -2,7 +2,7 @@
 
 .containerOrder {
   width: 1130;
-  height: 493px;
+  height: 518px;
   background-color: $primary-color;
   border-color: $secundary-color;
   border-style: solid;
@@ -15,7 +15,7 @@
 .orderTitle {
   color: rgb(61, 57, 57);
   font-size: $font-size-title;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family-primery;
   text-align: center;
   margin: 75px 0px 0px 0px;
 
@@ -26,7 +26,7 @@
   width: 650px;
   height: 240px;
   background-color: #d9d9d9;
-  border-radius: 10px;
+  border-radius: $border-radius-primery;
 
   @include desktop {
     width: 650px;

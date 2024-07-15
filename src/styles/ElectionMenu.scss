@@ -1,0 +1,37 @@
+@import "../App.scss";
+
+.containerOptionsMenu {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.containerOptionMenu {
+  height: 75px;
+  width: 672px;
+  background-color: $secundary-color;
+  border-color: $third-color;
+  border-style: solid;
+  border-width: 0.1px;
+  border-radius: $border-radius-primery;
+@include desktop {
+    width: 100%;
+}
+
+}
+
+.containerOptionMenu:hover {
+    background-color: $background-primary-color;
+    transition: background-color 0.3s ease;
+    color: $primary-color;
+    font-weight: bolder;
+  }
+
+.textMenu {
+  font-size: 30px;
+  color: $primary-color;
+  text-align: center;
+  cursor: pointer;
+  font-family: $font-family-primery;
+  margin: 23px 0px 23px 0px;
+}
