@@ -6,7 +6,6 @@ import '../styles/Logo.scss'
 const HomePage: React.FC = () => {
   return (
    <div className='backgroundHome'>
-
     <p className='homeText'></p>
     <Logo/>
   </div>
