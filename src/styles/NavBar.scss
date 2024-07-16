@@ -10,7 +10,7 @@
   height: 75px;
   width: 100%;
   background-color: $third-color;
-  margin: 80px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   border-color: $secundary-color;
   border-style: solid;
   border-radius: $border-radius-primery;
@@ -34,7 +34,7 @@ h2 {
   background-color: $background-primary-color;
   height: 75px;
   width: 100%;
-  margin: 80px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   border-style: solid;
   border-color: $secundary-color;
   font-weight: bold;
@@ -47,4 +47,11 @@ h2 {
   cursor: pointer;
   text-align: center;
   margin: 22px 0px 0px 0px;
+}
+
+.bannerButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 12px;
 }

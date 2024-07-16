@@ -15,7 +15,7 @@ const Login: React.FC = () => {
         <InputText/>
         <p className="textLogin">INGRESE CONTRASEÑA</p>
         <InputText/>
-       <ButtonAccess/>
+       <ButtonAccess buttonText="ACCEDER" className="buttonLogin"/>
       </div>
     </div>
   );

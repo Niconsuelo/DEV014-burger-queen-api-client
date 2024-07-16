@@ -1,14 +1,29 @@
-@import '../App.scss';
+@import "../App.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-.buttonLogin{
-    height: 50px;
-    width: 170px;
-    border-radius: $border-radius-primery;
-    margin: 10px 0px 30px 220px;
-    align-items: center;
-    background-color: $background-primary-color;
-    color: $primary-color;
-    font-size: $font-size-button;
-    cursor: pointer;
-  }
+.buttonLogin {
+  height: 50px;
+  width: 170px;
+  border-radius: $border-radius-primery;
+  margin: 10px 0px 30px 220px;
+  align-items: center;
+  background-color: $background-primary-color;
+  color: $primary-color;
+  font-size: $font-size-button;
+  cursor: pointer;
+}
+
+.buttonExit {
+  height: 55px;
+  width: 120px;
+  border-radius: $border-radius-primery;
+  font-weight: bold;
+  font-size: $font-size-button ;
+}
+
+.buttonExit:hover {
+  background-color: $background-primary-color;
+  transition: background-color 0.3s ease;
+  color: $primary-color;
+  font-weight: bold;
+}

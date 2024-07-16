@@ -1,8 +1,19 @@
 import "../styles/NavBar.scss";
+import ButtonAccess from "./ButtonAccess";
+import '../styles/ButtonAccess.scss';
 
 const NavBar: React.FC = () => {
   return (
+    <>
+    <div className="bannerButton">
+    <ButtonAccess buttonText="SALIR" className="buttonExit" />
+    </div>
+
     <div className="containerNav">
+     
+      <div className="bannerUser">
+
+      </div>
      
       <div className="optionSelect">
         <p className="textSelect">TOMAR PEDIDO</p>
@@ -16,6 +27,7 @@ const NavBar: React.FC = () => {
         <h2>HISTORIAL</h2>
       </div>
     </div>
+    </>
   );
 };
 
