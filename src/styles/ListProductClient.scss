@@ -1,14 +1,8 @@
-@import '../App.scss';
+@import "../App.scss";
 
-.containerProductClient {
-    width: 120px;
-    height: 434px;
-    background-color: $primary-color;
-    border-radius: $border-radius-primery;
-
-  
-    @include desktop {
-      width: 850px;
-      
-    }
-  }
+.containerListClient{
+  height: 512px;
+  width: 450px;
+  background-color: $primary-color ;
+  border-radius: $border-radius-primery;
+}

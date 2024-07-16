@@ -1,10 +1,15 @@
 import '../styles/ButtonAccess.scss'
 
-const ButtonAccess: React.FC = () => {
+interface ButtonAccessProps {
+  buttonText: string;
+  className: string;
+}
+
+const ButtonAccess: React.FC<ButtonAccessProps> = ({ buttonText, className }) => {
   return (
     <div>
-      <button type="submit" className="buttonLogin">
-        ACCEDER
+      <button type="submit" className={className}>
+      {buttonText}
       </button>
     </div>
   );

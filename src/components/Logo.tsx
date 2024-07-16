@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <div className="containerLogo">
       <div className="logoImg">
         <div className="marginButton">
-        <ButtonAccess />
+        <ButtonAccess buttonText="INGRESAR" className="buttonLogin" />
         </div>
       </div>
     </div>

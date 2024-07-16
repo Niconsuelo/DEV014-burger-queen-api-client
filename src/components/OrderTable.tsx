@@ -8,7 +8,7 @@ const OrderTable: React.FC = () => {
         <div className="container-input-order">
             <p className="orderTitle">INGRESAR Nº MESA</p>
             <InputText/>
-            <ButtonAccess/>
+            <ButtonAccess buttonText="INGRESAR" className="buttonLogin" />
         </div>
     </div>
   );
