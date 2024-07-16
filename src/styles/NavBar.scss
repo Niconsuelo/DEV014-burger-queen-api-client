@@ -16,11 +16,13 @@
   border-radius: $border-radius-primery;
 }
 
-h2 {
+.textOption {
   font-size: 30px;
   color: $secundary-color;
   text-align: center;
   cursor: pointer;
+  font-family: $font-family-primery;
+  margin: 23px 0px 23px 0px;
 }
 
 .optionNav:hover {
@@ -49,9 +51,18 @@ h2 {
   margin: 22px 0px 0px 0px;
 }
 
-.bannerButton{
+.bannerButton {
   display: flex;
   flex-direction: row;
   justify-content: end;
   padding: 12px;
+  gap: 0;
+}
+
+.textWelcome {
+  color: $primary-color;
+  font-family: $font-family-primery;
+  margin: 18px;
+  font-weight: bold;
+  font-size: $font-size-button ;
 }
