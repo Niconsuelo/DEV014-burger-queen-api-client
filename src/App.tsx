@@ -8,6 +8,7 @@ import LoginPage from "./page/LoginPage";
 import TablePage from "./page/TablePage";
 import MenuElectionPage from "./page/MenuElectionPage";
 import NavBar from "./components/NavBar";
+import PageTest from "./page/PageTest";
 
 const App: React.FC = () => {
   const [showNavBar, setShowNavBar] = useState(false);
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/table-order" element={<TablePage />} />
         <Route path="/menu-election" element={<MenuElectionPage />} />
+        <Route path='/page-test' element={<PageTest/>} />
       </Routes>
     </>
   );
