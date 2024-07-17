@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px; /* Espacio entre los elementos */
-  
+
   @include desktop {
     width: 100%;
   }
@@ -29,7 +29,7 @@
   justify-content: center;
   display: flex;
   margin: 25px;
-  border-color: $secundary-color ;
+  border-color: $secundary-color;
   border-style: solid;
 }
 .containerText {
@@ -47,7 +47,6 @@
   font-size: medium;
   font-weight: bold;
   font-family: $font-family-primery;
- 
   margin: 5px 0 0;
 }
 

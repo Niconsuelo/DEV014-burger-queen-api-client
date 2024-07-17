@@ -1,0 +1,65 @@
+@import "../App.scss";
+
+.containerListProductBreakfast {
+  width: 1130;
+  height: 518px;
+  background-color: $primary-color;
+  background-size: cover;
+  border-color: $secundary-color;
+  border-style: solid;
+  border-radius: $border-radius-primery;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1%; /* Espacio entre los elementos */
+
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.electionProduct {
+  width: 140px;
+  height: 70px;
+  background-color:$background-primary-color;
+  border-radius: $border-radius-primery;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 25px;
+  border-color: $secundary-color;
+  border-style: solid;
+  margin: 17px;
+}
+
+
+
+.containerText {
+  text-align: center;
+}
+
+.textElectionProduct {
+  color: $primary-color;
+  font-family: $font-family-primery;
+  font-size: large;
+  margin: 0;
+}
+.textPrice {
+  color: $primary-color;
+  font-size: medium;
+  font-weight: bold;
+  font-family: $font-family-primery;
+
+  margin: 5px 0 0;
+}
+
+.sectionLeft {
+  justify-content: center;
+}
+
+.sectionRight {
+  flex-wrap: wrap;
+}
