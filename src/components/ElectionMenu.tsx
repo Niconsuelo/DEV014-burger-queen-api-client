@@ -1,13 +1,13 @@
-import "../styles/ElectionMenu.scss";
+import style from "../styles/ElectionMenu.module.scss";
 
 const ElectionMenu: React.FC = () => {
   return (
-    <div className="containerOptionsMenu">
-      <div className="containerOptionMenu">
-        <p className="textMenu"> DESAYUNO</p>
+    <div className={style.containerOptionsMenu}>
+      <div className={style.containerOptionMenu}>
+        <p className={style.textMenu}> DESAYUNO</p>
       </div>
-      <div className="containerOptionMenu">
-      <p className="textMenu">ALMUERZO</p>
+      <div className={style.containerOptionMenu}>
+      <p className={style.textMenu}>ALMUERZO</p>
       </div>
       
     </div>

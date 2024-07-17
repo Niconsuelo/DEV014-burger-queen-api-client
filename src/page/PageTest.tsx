@@ -1,13 +1,13 @@
 import ElectionMenu from "../components/ElectionMenu";
 import ListProductBreakfast from "../components/ListProductBreakfast";
 import ListProductClient from "../components/ListProductClient";
-import "../styles/MenuElectionPage.scss";
+import style from "../styles/MenuElectionPage.module.scss";
 
 const MenuElectionPage: React.FC = () => {
   return (
     <>
-      <div className="electionPage">
-        <div className="containerElectionProduct">
+      <div className={style.electionPage}>
+        <div className={style.containerElectionProduct}>
           <ElectionMenu />
           <ListProductBreakfast />
         </div>

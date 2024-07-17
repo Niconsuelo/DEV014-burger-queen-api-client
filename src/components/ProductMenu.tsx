@@ -1,10 +1,9 @@
-import "../styles/NavBar.scss";
-import "../styles/ProductMenu.scss";
+import style from "../styles/ProductMenu.module.scss";
 
 const ProductMenu: React.FC = () => {
   return (
-    <div className="containerElectionMenu">
-      <div className="containerMenu"></div>
+    <div className={style.containerElectionMenu}>
+      <div className={style.containerMenu}></div>
     </div>
   );
 };
