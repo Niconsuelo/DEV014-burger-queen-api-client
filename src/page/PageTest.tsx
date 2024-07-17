@@ -1,5 +1,5 @@
 import ElectionMenu from "../components/ElectionMenu";
-import ListProductBurger from "../components/ListProductBurger";
+import ListProductAccompaniment from "../components/ListProductAccompaniment";
 import ListProductClient from "../components/ListProductClient";
 import style from "../styles/MenuElectionPage.module.scss";
 
@@ -9,7 +9,7 @@ const MenuElectionPage: React.FC = () => {
       <div className={style.electionPage}>
         <div className={style.containerElectionProduct}>
           <ElectionMenu />
-          <ListProductBurger />
+          <ListProductAccompaniment/>
         </div>
         <div>
           <ListProductClient />
