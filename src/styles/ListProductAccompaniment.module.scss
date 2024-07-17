@@ -1,0 +1,60 @@
+@import "../App.scss";
+
+.containerListProductBreakfast {
+  width: 920px;
+  height: 434px;
+  background-image: url("https://i.ibb.co/LSNFmqT/Disen-o-sin-ti-tulo-4.png");
+  background-size: cover;
+  border-color: $secundary-color;
+  border-style: solid;
+  border-radius: $border-radius-primery;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre los elementos */
+  
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.electionProduct {
+  width: 200px;
+  height: 100px;
+  background-color: #12100dd8;
+  border-radius: $border-radius-primery;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 25px;
+  border-color: $secundary-color ;
+  border-style: solid;
+}
+.containerText {
+  text-align: center;
+}
+
+.textElectionProduct {
+  color: $primary-color;
+  font-family: $font-family-primery;
+  font-size: medium;
+  margin: 0;
+}
+.textPrice {
+  color: $primary-color;
+  font-size: medium;
+  font-weight: bold;
+  font-family: $font-family-primery;
+ 
+  margin: 5px 0 0;
+}
+
+.sectionLeft {
+  justify-content: center;
+}
+
+.sectionRight {
+  flex-wrap: wrap;
+}
