@@ -1,12 +1,11 @@
 
 import Logo from '../components/Logo';
-import '../styles/HomePage.scss'
-import '../styles/Logo.scss'
+import style from "../styles/HomePage.module.scss";
 
 const HomePage: React.FC = () => {
   return (
-   <div className='backgroundHome'>
-    <p className='homeText'></p>
+   <div className={style.backgroundHome}>
+    <p className={style.homeText}></p>
     <Logo/>
   </div>
     );

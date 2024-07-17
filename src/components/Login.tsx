@@ -1,19 +1,19 @@
-import "../styles/Login.scss";
+import style from "../styles/Login.module.scss";
 import ButtonAccess from "./ButtonAccess";
 import InputText from "./InputText";
-import '../styles/InputText.scss';
+import "../styles/ButtonAccess.scss";
 
 const Login: React.FC = () => {
   return (
-    <div className="containerLogin">
-      <div className="textColor imgLogin"></div>
-
+    <div className={style.containerLogin}>
+      <div className={`${style.textColor} ${style.imgLogin}`}></div>
+    
       <div>
-        <div className="textColor loginText"> INICIAR SESIÓN</div>
-        <div className="loginLine"></div>
-        <p className="textLogin">INGRESE CORREO ELÉCTRONICO</p>
+        <div className={`${style.textColor} ${style.loginText}`}> INICIAR SESIÓN</div>
+        <div className={style.loginLine}></div>
+        <p className={style.textLogin}>INGRESE CORREO ELÉCTRONICO</p>
         <InputText/>
-        <p className="textLogin">INGRESE CONTRASEÑA</p>
+        <p className={style.textLogin}>INGRESE CONTRASEÑA</p>
         <InputText/>
        <ButtonAccess buttonText="ACCEDER" className="buttonLogin"/>
       </div>

@@ -1,4 +1,4 @@
-import '../styles/InputText.scss'
+import style from '../styles/InputText.module.scss'
 
 const InputText: React.FC = () => {
   return (
@@ -6,7 +6,7 @@ const InputText: React.FC = () => {
       <input
           type="text"
           placeholder="  "
-          className="inputLogin"
+          className={style.inputLogin}
         />
     </div>
   );

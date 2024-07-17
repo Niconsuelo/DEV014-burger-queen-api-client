@@ -1,6 +1,6 @@
-import '../App.scss';
+
 import OrderTable from "../components/OrderTable";
-import '../styles/OrderTable.scss';
+
 
 
 const TablePage: React.FC = () => {

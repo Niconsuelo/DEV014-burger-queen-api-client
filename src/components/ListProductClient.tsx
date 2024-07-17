@@ -1,9 +1,9 @@
-import "../styles/ListProductClient.scss";
+import style from "../styles/ListProductClient.module.scss";
 
 const ListProducClient: React.FC = () => {
   return (
     <>
-      <div className="containerListClient"></div>
+      <div className={style.containerListClient}></div>
     </>
   );
 };
