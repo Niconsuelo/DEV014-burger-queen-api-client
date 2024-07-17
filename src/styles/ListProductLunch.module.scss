@@ -1,20 +1,20 @@
 @import "../App.scss";
 
 .containerListProductBreakfast {
-  width: 920px;
+  width: 918px;
   height: 434px;
-  background-image: url("https://i.ibb.co/xhVHtqK/Disen-o-sin-ti-tulo-1.png");
+  background-image: url("https://i.ibb.co/3m9vtcj/Disen-o-sin-ti-tulo-2.png");
   background-size: cover;
   border-color: $secundary-color;
   border-style: solid;
   border-radius: $border-radius-primery;
   margin-top: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espacio entre los elementos */
-  
+  gap: 2px; /* Espacio entre los elementos */
+
   @include desktop {
     width: 100%;
   }
@@ -29,7 +29,7 @@
   justify-content: center;
   display: flex;
   margin: 25px;
-  border-color: $secundary-color ;
+  border-color: $secundary-color;
   border-style: solid;
 }
 .containerText {
@@ -47,14 +47,8 @@
   font-size: medium;
   font-weight: bold;
   font-family: $font-family-primery;
- 
-  margin: 5px 0 0;
 }
 
 .sectionLeft {
   justify-content: center;
-}
-
-.sectionRight {
-  flex-wrap: wrap;
 }
