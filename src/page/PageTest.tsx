@@ -1,19 +1,12 @@
-import ElectionMenu from "../components/ElectionMenu";
-import ListElectionLunch from "../components/ListElectionLunch";
-import ListProductClient from "../components/ListProductClient";
-import style from "../styles/MenuElectionPage.module.scss";
+import TotalTable from "../components/TotalTable";
+import style from "../styles/TotalTable.module.scss";
+
 
 const MenuElectionPage: React.FC = () => {
   return (
     <>
-      <div className={style.electionPage}>
-        <div className={style.containerElectionProduct}>
-          <ElectionMenu />
-          <ListElectionLunch/>
-        </div>
-        <div>
-          <ListProductClient />
-        </div>
+      <div>
+        <TotalTable/>
       </div>
     </>
   );
