@@ -18,10 +18,26 @@
   width: 120px;
   border-radius: $border-radius-primery;
   font-weight: bold;
-  font-size: $font-size-button ;
+  font-size: $font-size-button;
 }
 
 .buttonExit:hover {
+  background-color: $background-primary-color;
+  transition: background-color 0.3s ease;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.buttonSendOrder {
+  border-radius: $border-radius-primery;
+  background-color: $third-color;
+  color: $secundary-color;
+  font-size: medium;
+  font-weight: 700;
+  height: 50px;
+}
+
+.buttonSendOrder:hover {
   background-color: $background-primary-color;
   transition: background-color 0.3s ease;
   color: $primary-color;
