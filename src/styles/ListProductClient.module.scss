@@ -1,8 +1,77 @@
 @import "../App.scss";
 
-.containerListClient{
+.containerListClient {
   height: 512px;
   width: 450px;
-  background-color: $primary-color ;
+  background-color: $primary-color;
   border-radius: $border-radius-primery;
+  display: flex;
+  flex-direction: column;
+  border-color: $primary-color;
+  border-style: solid;
+}
+.textOptionClient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 14px;
+  padding-right: 7px;
+}
+
+.textOrderTable {
+  font-family: $font-family-primery;
+  font-size: large;
+  font-weight: 700;
+  padding-left: 14px;
+  color: $primary-color;
+}
+.textOrderTableClient {
+  font-family: $font-family-primery;
+  font-size: large;
+  font-weight: 700;
+  padding-left: 14px;
+  color: $secundary-color;
+}
+
+.numberClientContainer {
+  background-color: $background-primary-color;
+  height: 50px;
+  border-radius: 10px 10px 0px 0px;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nameProductClient {
+  background-color: $secundary-color;
+  height: 40px;
+  color: white;
+}
+
+.totalPriceClient {
+  background-color: $third-color;
+  height: 40px;
+}
+
+.textTotalPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-right: 7px;
+}
+
+.buttonSendProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secundary-color;
+  height: 70px;
+  border-radius: 0px 0px 10px 10px;
+}
+.textContainerListClient {
+  font-family: $font-family-primery;
+  font-size: smaller;
+  font-weight: 700;
+  padding-left: 14px;
 }
