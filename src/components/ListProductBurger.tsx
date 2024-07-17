@@ -1,24 +1,23 @@
-import style from "../styles/ListProductLunch.module.scss";
+import style from "../styles/ListProductBurger.module.scss";
 
-const ListProductLunch: React.FC = () => {
+const ListProductBurger: React.FC = () => {
   return (
     <>
       <div className={style.containerListProductBreakfast}>
         <section className={style.sectionLeft}>
           <div className={style.electionProduct}>
             <div className={style.containerText}>
-              <h2 className={style.textElectionProduct}>HAMBURGUESAS</h2>
+              <h2 className={style.textElectionProduct}>HAMBURGUESA SIMPLE</h2>
+              <p className={style.textPrice}>$10</p>
             </div>
           </div>
+        </section>
 
+        <section className={style.sectionRight}>
           <div className={style.electionProduct}>
             <div className={style.containerText}>
-              <h2 className={style.textElectionProduct}>ACOMPAÑAMIENTOS</h2>
-            </div>
-          </div>
-          <div className={style.electionProduct}>
-            <div className={style.containerText}>
-              <h2 className={style.textElectionProduct}>BEBESTIBLES</h2>
+              <h2 className={style.textElectionProduct}>HAMBUERGUESA DOBLE</h2>
+              <p className={style.textPrice}>$15</p>
             </div>
           </div>
         </section>
@@ -28,4 +27,4 @@ const ListProductLunch: React.FC = () => {
     </>
   );
 };
-export default ListProductLunch;
+export default ListProductBurger;
