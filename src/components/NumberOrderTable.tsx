@@ -1,9 +1,9 @@
 import ButtonAccess from "./ButtonAccess";
 import InputText from "./InputText";
-import style from "../styles/OrderTable.module.scss";
+import style from "../styles/NumberOrderTable.module.scss";
 import "../styles/ButtonAccess.scss";
 
-const OrderTable: React.FC = () => {
+const NumberOrderTable: React.FC = () => {
   return (
     <div className={style.containerOrder}>
         <div className={style.containerInputOrder}>
@@ -15,4 +15,4 @@ const OrderTable: React.FC = () => {
   );
 };
 
-export default OrderTable;
+export default NumberOrderTable;

@@ -1,0 +1,17 @@
+@import "../App.scss";
+
+.viewDetailOrder{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 14px;
+    padding-right: 10px;
+
+}
+.textBannerViewOrder{
+    background-color: black;
+    color: $primary-color;
+    font-size: small;
+    font-weight: bold;
+}

@@ -1,12 +1,11 @@
-import TotalTable from "../components/TotalTable";
-import style from "../styles/TotalTable.module.scss";
+import ViewDetailOrderTable from "../components/ViewDetailOrderTable";
 
 
 const MenuElectionPage: React.FC = () => {
   return (
     <>
       <div>
-        <TotalTable/>
+   <ViewDetailOrderTable/>
       </div>
     </>
   );
