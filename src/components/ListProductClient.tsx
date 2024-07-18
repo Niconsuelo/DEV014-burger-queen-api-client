@@ -1,7 +1,7 @@
 import style from "../styles/ListProductClient.module.scss";
+import BannerListProductClient from "./BannerListProductClient";
 import ButtonAccess from "./ButtonAccess";
 import UnitProductDetails from "./UnitProductDetails";
-
 
 const ListProducClient: React.FC = () => {
   return (
@@ -12,14 +12,7 @@ const ListProducClient: React.FC = () => {
           <p className={style.textOrderTable}> MESA 01</p>
         </section>
         <div className={style.nameProductClient}>
-          <section
-            className={`${style.textOptionClient} ${style.textContainerListClient}`}
-          >
-            <p>Nº</p>
-            <p>PRODUCTO</p>
-            <p>EDITAR</p>
-            <p>VALOR</p>
-          </section>
+         <BannerListProductClient/>
         </div>
         <UnitProductDetails />
 
@@ -30,12 +23,11 @@ const ListProducClient: React.FC = () => {
           </section>
         </div>
         <div className={style.buttonSendProduct}>
-          <p className={style.textContainerListClient}>
-            <ButtonAccess
-              buttonText="ENVIAR A COCINA"
-              className="buttonSendOrder"
-            />
-          </p>
+          <p className={style.textContainerListClient}> </p>
+          <ButtonAccess
+            buttonText="ENVIAR A COCINA"
+            className="buttonSendOrder"
+          />
         </div>
       </div>
     </>

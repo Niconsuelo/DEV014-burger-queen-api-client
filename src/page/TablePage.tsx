@@ -1,12 +1,12 @@
 
-import OrderTable from "../components/OrderTable";
+import NumberOrderTable from "../components/NumberOrderTable";
 
 
 
 const TablePage: React.FC = () => {
   return (
    <div>
-   <OrderTable/>
+   <NumberOrderTable/>
   </div>
     );
 };

@@ -15,7 +15,6 @@
   align-items: center;
   gap: 0.1%; /* Espacio entre los elementos */
 
-
   @include desktop {
     width: 100%;
   }
@@ -33,9 +32,15 @@
   border-color: $secundary-color;
   border-style: solid;
   margin: 17px;
+  cursor: pointer;
 }
 
-
+.electionProduct:hover {
+  background-color: $secundary-color;
+  transition: background-color 0.3s ease;
+  color: $primary-color;
+  font-weight: bold;
+}
 
 .containerText {
   text-align: center;
@@ -52,7 +57,6 @@
   font-size: medium;
   font-weight: bold;
   font-family: $font-family-primery;
-
   margin: 5px 0 0;
 }
 
