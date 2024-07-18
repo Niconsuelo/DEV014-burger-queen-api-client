@@ -57,4 +57,5 @@ add sprint 1 (2 days)
 
 ### Sprint learnings
 
-* **Hola:** 
+* **Hola:** se agregan iconos al modal de mensajes de validacion de correo y contraseña.
+ 

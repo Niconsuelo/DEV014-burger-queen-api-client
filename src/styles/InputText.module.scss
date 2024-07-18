@@ -1,5 +1,12 @@
 @import "../App.scss";
 
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .inputLogin {
   height: 60px;
   width: 450px;
@@ -8,4 +15,20 @@
   align-items: center;
   border: 0;
   font-size: 30px;
+}
+.toggleButton {
+  position: absolute;
+  right: 10px; // Ajusta la posición según sea necesario
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  margin: 3px 91px 17px 0px
+}
+
+.toggleButton:hover {
+  color: #333;
 }

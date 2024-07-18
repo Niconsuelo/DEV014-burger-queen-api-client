@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+
 }
 
 .buttonExit {
@@ -46,4 +47,21 @@
   transition: background-color 0.3s ease;
   color: $primary-color;
   font-weight: bold;
+}
+
+.buttonLoginHome {
+  height: 50px;
+  width: 170px;
+  border-radius: $border-radius-primery;
+  margin: 10px 0px 30px 220px;
+  align-items: center;
+  background-color: $background-primary-color;
+  color: $primary-color;
+  font-size: $font-size-button;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 43%;
 }
