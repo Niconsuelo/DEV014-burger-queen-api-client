@@ -12,6 +12,7 @@ import PageTest from "./page/PageTest";
 import HistoryPage from "./page/HistoryPage";
 
 const App: React.FC = () => {
+  
   const [showNavBar, setShowNavBar] = useState(false);
   //ubicación actual y permite ejecutar efectos secundarios cuando la ubicación cambia.
   const location = useLocation();

@@ -3,12 +3,13 @@ import '../styles/ButtonAccess.scss'
 interface ButtonAccessProps {
   buttonText: string;
   className: string;
+  onClick?: () => void;
 }
 
-const ButtonAccess: React.FC<ButtonAccessProps> = ({ buttonText, className }) => {
+const ButtonAccess: React.FC<ButtonAccessProps> = ({ buttonText, className, onClick }) => {
   return (
     <div>
-      <button type="submit" className={className}>
+      <button type="submit" className={className} onClick={onClick}>
       {buttonText}
       </button>
     </div>

@@ -1,13 +1,23 @@
 import style from "../styles/NavBar.module.scss";
 import ButtonAccess from "./ButtonAccess";
 import "../styles/ButtonAccess.scss";
+import { useNavigate } from "react-router-dom";
 
 const NavBar: React.FC = () => {
+  const navigateTo = useNavigate();
+
+  const clickButtonExit = () => {
+    console.log('Button clickExit');
+    navigateTo("/login");
+  };
+
+
+
   return (
     <>
       <div className={style.bannerButton}>
         <p className={style.textWelcome}> ¡ BIENVENIDO !</p>
-        <ButtonAccess buttonText="SALIR" className="buttonExit" />
+        <ButtonAccess buttonText="SALIR" className="buttonExit" onClick={clickButtonExit}/>
       </div>
 
       <div className={style.containerNav}>

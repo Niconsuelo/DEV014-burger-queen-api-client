@@ -70,3 +70,10 @@
   color: $primary-color;
   font-size: 15px;
 }
+
+.errorMessage{
+  color: rgba(195, 255, 0, 0.802);
+  font-family: $font-family-primery;
+  font-weight: bold;
+  text-align: center;
+}
