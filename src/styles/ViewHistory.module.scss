@@ -1,0 +1,47 @@
+@import "../App.scss";
+
+.containerViewHistory{
+    width: 1130;
+    height: 518px;
+    background-color: $primary-color;
+    border-color: $secundary-color;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 30px;
+    font-family: $font-family-primery ;
+}
+
+.historyDetail{
+    width: 410px;
+    height: 490px;
+    background-color: $primary-color;
+    border-style: solid;
+    border-color: $secundary-color;
+
+    @include desktop {
+        width: 950px;
+        height: 490px;
+      }
+}
+.bannerHistory{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 14px;
+    padding-right: 10px;
+}
+
+.textBannerHistory{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 14px;
+    padding-right: 7px;
+    font-family: $font-family-primery;
+    color: $primary-color;
+}

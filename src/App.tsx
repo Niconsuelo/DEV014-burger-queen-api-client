@@ -9,6 +9,7 @@ import TablePage from "./page/TablePage";
 import MenuElectionPage from "./page/MenuElectionPage";
 import NavBar from "./components/NavBar";
 import PageTest from "./page/PageTest";
+import HistoryPage from "./page/HistoryPage";
 
 const App: React.FC = () => {
   const [showNavBar, setShowNavBar] = useState(false);
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <Route path="/table-order" element={<TablePage />} />
         <Route path="/menu-election" element={<MenuElectionPage />} />
         <Route path='/page-test' element={<PageTest/>} />
+        <Route path='/history-page' element={<HistoryPage/>} />
       </Routes>
     </>
   );
