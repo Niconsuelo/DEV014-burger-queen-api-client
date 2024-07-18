@@ -1,7 +1,7 @@
 import ViewHistory from "../components/ViewHistory";
 
 
-const PageTest: React.FC = () => {
+const HistoryPage: React.FC = () => {
   return (
     <>
       <div>
@@ -10,4 +10,4 @@ const PageTest: React.FC = () => {
     </>
   );
 };
-export default PageTest;
+export default HistoryPage;
