@@ -18,30 +18,9 @@
   padding-right: 7px;
 }
 
-.textOrderTable {
-  font-family: $font-family-primery;
-  font-size: large;
-  font-weight: 700;
-  padding-left: 14px;
-  color: $primary-color;
-}
-.textOrderTableClient {
-  font-family: $font-family-primery;
-  font-size: large;
-  font-weight: 700;
-  padding-left: 14px;
-  color: $secundary-color;
-}
 
-.numberClientContainer {
-  background-color: $background-primary-color;
-  height: 50px;
-  border-radius: 10px 10px 0px 0px;
-  text-align: start;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+
+
 
 .nameProductClient {
   background-color: $secundary-color;

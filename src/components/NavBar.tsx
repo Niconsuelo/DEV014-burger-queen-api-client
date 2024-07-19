@@ -7,17 +7,31 @@ const NavBar: React.FC = () => {
   const navigateTo = useNavigate();
 
   const clickButtonExit = () => {
-    console.log('Button clickExit');
+    console.log("Button clickExit");
     navigateTo("/login");
   };
 
-
+  const clickButtonBack = () => {
+    navigateTo(-1); // Navega a la página anterior
+  };
 
   return (
     <>
       <div className={style.bannerButton}>
+        <div className={style.buttonBackNavBar}>
+        <ButtonAccess
+          buttonText="VOLVER ATRÁS"
+          className={style.buttonExitNavBar}
+          onClick={clickButtonBack}
+        />
+</div>
         <p className={style.textWelcome}> ¡ BIENVENIDO !</p>
-        <ButtonAccess buttonText="SALIR" className="buttonExit" onClick={clickButtonExit}/>
+
+        <ButtonAccess
+          buttonText="SALIR"
+          className={style.buttonExitNavBar}
+          onClick={clickButtonExit}
+        />
       </div>
 
       <div className={style.containerNav}>

@@ -1,5 +1,4 @@
 @import "../App.scss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 .buttonLogin {
   height: 50px;
@@ -14,8 +13,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
-
 }
 
 .buttonExit {
@@ -24,6 +21,10 @@
   border-radius: $border-radius-primery;
   font-weight: bold;
   font-size: $font-size-button;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttonExit:hover {
@@ -64,4 +65,33 @@
   align-items: center;
   align-content: center;
   margin-left: 43%;
+}
+
+.buttonBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 120px;
+  border-radius: $border-radius-primery;
+}
+
+.iconButton .faIcon {
+  font-size: 24px;
+}
+
+.iconButton .buttonText {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.bannerButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textWelcome {
+  margin: 0 20px;
 }
