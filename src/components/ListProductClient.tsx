@@ -1,5 +1,6 @@
 import style from "../styles/ListProductClient.module.scss";
 import BannerListProductClient from "./BannerListProductClient";
+import BannerNumberClient from "./BannerNumberClient";
 import ButtonAccess from "./ButtonAccess";
 import UnitProductDetails from "./UnitProductDetails";
 
@@ -7,10 +8,7 @@ const ListProducClient: React.FC = () => {
   return (
     <>
       <div className={style.containerListClient}>
-        <section className={style.numberClientContainer}>
-          <p className={style.textOrderTableClient}>Nº CLIENTE:</p>
-          <p className={style.textOrderTable}> MESA 01</p>
-        </section>
+      <BannerNumberClient/>
         <div className={style.nameProductClient}>
          <BannerListProductClient/>
         </div>

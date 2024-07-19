@@ -10,7 +10,7 @@ interface LoginProps {
   setError: (value: string) => void;
   setPassword: (value: string) => void;
   error: string;
-  onSubmit: () => void;
+  onSubmit?: () => void;
 }
 
 const Login: React.FC<LoginProps> = ({
@@ -18,17 +18,17 @@ const Login: React.FC<LoginProps> = ({
   setEmail,
   password,
   setPassword,
+
   onSubmit,
 }) => {
-
   //actualizan el estado correspondiente en tu componente cada vez que el usuario modifica el valor de los campos
-const emailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  setEmail(e.target.value);
-};
+  const emailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
 
-const passwordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  setPassword(e.target.value);
-};
+  const passwordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
 
   return (
     <div className={style.containerLogin}>

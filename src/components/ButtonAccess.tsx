@@ -1,9 +1,10 @@
 import '../styles/ButtonAccess.scss'
 
 interface ButtonAccessProps {
-  buttonText: string;
-  className: string;
+  buttonText?: string;
+  className?: string;
   onClick?: () => void;
+  children?: React.ReactNode; 
 }
 
 const ButtonAccess: React.FC<ButtonAccessProps> = ({ buttonText, className, onClick }) => {

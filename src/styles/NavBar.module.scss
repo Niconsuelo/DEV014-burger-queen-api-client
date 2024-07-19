@@ -62,7 +62,19 @@
 .textWelcome {
   color: $primary-color;
   font-family: $font-family-primery;
-  margin: 18px;
+  margin: 15px;
   font-weight: bold;
   font-size: $font-size-button ;
+}
+
+.buttonBackNavBar{
+  margin: 0% 60% 0% 0%;
+}
+
+.buttonExitNavBar{
+height: 45px;
+width: 140px;
+font-weight: bold;
+font-family: $font-family-primery;
+font-size: medium;
 }
