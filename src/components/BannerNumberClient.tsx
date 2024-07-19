@@ -1,11 +1,18 @@
 import style from '../styles/BannerNumberClient.module.scss'
+import React from 'react';
 
-const BannerNumberClient: React.FC = () => {
+interface BannerNumberClientProps{
+    tableNumber?: string;
+}
+
+
+
+const BannerNumberClient: React.FC<BannerNumberClientProps> = ({tableNumber}) => {
     return (
 
 <section className={style.numberClientContainer}>
 <p className={style.textOrderTableClient}>Nº CLIENTE:</p>
-<p className={style.textOrderTable}> MESA 01</p>
+<p className={style.textOrderTable}>MESA: {tableNumber}</p>
 </section>
 
 );

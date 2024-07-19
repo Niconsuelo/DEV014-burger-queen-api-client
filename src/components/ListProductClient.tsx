@@ -4,11 +4,16 @@ import BannerNumberClient from "./BannerNumberClient";
 import ButtonAccess from "./ButtonAccess";
 import UnitProductDetails from "./UnitProductDetails";
 
-const ListProducClient: React.FC = () => {
+interface ListProducClientProps{
+  tableNumber?: string | null;
+}
+
+
+const ListProducClient: React.FC<ListProducClientProps> = ({tableNumber}) => {
   return (
     <>
       <div className={style.containerListClient}>
-      <BannerNumberClient/>
+      <BannerNumberClient tableNumber={tableNumber  ?? 'No hay número de mesa'}/>
         <div className={style.nameProductClient}>
          <BannerListProductClient/>
         </div>

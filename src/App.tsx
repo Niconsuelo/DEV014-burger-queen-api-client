@@ -10,6 +10,7 @@ import MenuElectionPage from "./page/MenuElectionPage";
 import NavBar from "./components/NavBar";
 import PageTest from "./page/PageTest";
 import HistoryPage from "./page/HistoryPage";
+import ViewOrderPage from "./page/ViewOrderPage";
 
 const App: React.FC = () => {
   
@@ -33,9 +34,10 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/table-order" element={<TablePage />} />
-        <Route path="/menu-election" element={<MenuElectionPage />} />
+        <Route path="/order-product" element={<MenuElectionPage />} />
         <Route path='/page-test' element={<PageTest/>} />
         <Route path='/history-page' element={<HistoryPage/>} />
+        <Route path='/view-order-page' element={<ViewOrderPage/>} />
       </Routes>
     </>
   );

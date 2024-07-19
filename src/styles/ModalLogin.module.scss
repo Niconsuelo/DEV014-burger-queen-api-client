@@ -21,11 +21,17 @@
 
 .textErrorModal {
   font-family: $font-family-primery;
-  font-size: large;
+  font-size: x-large;
 }
 
 .icon{
   font-size: 54px;
   color: rgb(8, 8, 34); // Ajusta el color según tus necesidades
   margin-bottom: 10px;
+}
+
+.buttonCloseModal{
+  height: 40px;
+  width: 90px;
+  font-size: medium;
 }

@@ -1,15 +1,30 @@
 import style from "../styles/ElectionMenu.module.scss";
 
-const ElectionMenu: React.FC = () => {
+interface ElectionMenuProps {
+  onMenuChange: (menu: "breakfast" | "lunch" | "none")  => void;
+}
+
+const ElectionMenu: React.FC<ElectionMenuProps> = ({ onMenuChange }) => {
   return (
     <div className={style.containerOptionsMenu}>
       <div className={style.containerOptionMenu}>
-        <p className={style.textMenu}> DESAYUNO</p>
+        <button
+          onClick={() => onMenuChange("breakfast")}
+          className={style.containerOptionMenu}
+        >
+          {" "}
+          DESAYUNO
+        </button>
       </div>
       <div className={style.containerOptionMenu}>
-      <p className={style.textMenu}>ALMUERZO</p>
+        <button
+          onClick={() => onMenuChange("lunch")}
+          className={style.containerOptionMenu}
+        >
+          {" "}
+          ALMUERZO
+        </button>
       </div>
-      
     </div>
   );
 };

@@ -11,10 +11,13 @@
   width: 100%;
   background-color: $secundary-color;
   margin: 0px 0px 0px 0px;
-  border-color: $primary-color;
-  border-style: solid;
+  border-color: 0.5px solid $primary-color;
+  border-style: ridge;
   border-radius: $border-radius-primery;
   color: $primary-color;
+  font-family: $font-family-primery;
+  font-size: $font-size-title;
+
 }
 
 .containerOptionMenu:hover {
@@ -24,11 +27,3 @@
   font-weight: bolder;
 }
 
-.textMenu {
-  font-size: 30px;
-  color: $primary-color;
-  text-align: center;
-  cursor: pointer;
-  font-family: $font-family-primery;
-  margin: 23px 0px 23px 0px;
-}

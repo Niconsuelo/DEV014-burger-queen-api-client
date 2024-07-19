@@ -1,13 +1,15 @@
+import { useParams } from "react-router-dom";
 import style from "../styles/ViewDetailOrderTable.module.scss";
 import BannerViewOrder from "./BannerViewOrder";
 import ButtonAccess from "./ButtonAccess";
 
 const ViewDetailOrderTable: React.FC = () => {
+  const { tableNumber } = useParams<{ tableNumber: string }>();
   return (
     <div className={style.containerOrder}>
       <div className={style.numberTable}>
         <p className={style.textNumberTableView}>Nº DE MESA:</p>
-        <p className={style.NumberTableView}>00</p>
+        <p className={style.NumberTableView}>{tableNumber}</p>
       </div>
 
       <div className={style.InputOrder}>
