@@ -1,7 +1,7 @@
 import style from "../styles/NavBar.module.scss";
 import ButtonAccess from "./ButtonAccess";
 import "../styles/ButtonAccess.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
   const navigateTo = useNavigate();
@@ -38,15 +38,15 @@ const NavBar: React.FC = () => {
         <div className={style.bannerUser}></div>
 
         <div className={style.optionNav}>
-          <p className={style.textOption}>TOMAR PEDIDO</p>
+          <Link to='/order-product' className={style.textOption}>TOMAR PEDIDO</Link>
         </div>
 
         <div className={style.optionNav}>
-          <p className={style.textOption}> VER PEDIDO</p>
+          <Link to="/view-order-page"  className={style.textOption}> VER PEDIDO</Link>
         </div>
 
         <div className={style.optionNav}>
-          <p className={style.textOption}>HISTORIAL</p>
+          <Link to="/history-page" className={style.textOption}>HISTORIAL</Link>
         </div>
       </div>
     </>

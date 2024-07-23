@@ -7,9 +7,9 @@ interface LoginProps {
   email: string;
   setEmail: (value: string) => void;
   password: string;
-  setError: (value: string) => void;
   setPassword: (value: string) => void;
   error: string;
+  setError: (value: string) => void;
   onSubmit?: () => void;
 }
 
@@ -36,7 +36,6 @@ const Login: React.FC<LoginProps> = ({
 
       <div>
         <div className={`${style.textColor} ${style.loginText}`}>
-          {" "}
           INICIAR SESIÓN
         </div>
         <div className={style.loginLine}></div>
@@ -55,6 +54,7 @@ const Login: React.FC<LoginProps> = ({
           onChange={passwordChange}
         />
 
+        {/* Muestra el error */}
         <ButtonAccess
           buttonText="ACCEDER"
           className="buttonLogin"

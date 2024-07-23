@@ -3,9 +3,13 @@
 .containerElectionMenu {
   display: flex;
   flex-direction: row;
+  max-height: 500px; /* Ajusta según tus necesidades */
+  overflow-y: auto;  /* Añade scroll vertical si es necesario */
+  overflow-x: hidden; /* Opcional: Evita el scroll horizontal */
+  padding: 1rem;
 }
 
-.containerMenu {
+.containerMenu{
   width: 920px;
   height: 434px;
   background-image: url("https://i.ibb.co/Q8vrsp3/Vintage-Retro-Delicious-Burger-Food-Logo-3.png");

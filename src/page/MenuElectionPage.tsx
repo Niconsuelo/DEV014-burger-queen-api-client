@@ -1,23 +1,47 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ElectionMenu from "../components/ElectionMenu";
 import ListProductClient from "../components/ListProductClient";
 import ProductMenu from "../components/ProductMenu";
 import style from "../styles/MenuElectionPage.module.scss";
 import ListProductBreakfast from "../components/ListProductBreakfast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ListElectionLunch from "../components/ListElectionLunch";
 
 const MenuElectionPage: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const tableNumber = queryParams.get("tableNumber") ?? undefined;
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+  //useNavigate permite cambiaar la url programaticamente.
 
-  const [menu, setMenu] = useState<"breakfast" | "lunch" | "none">("none");
+  const initialMenu = (queryParams.get("menu") as "breakfast" | "lunch" | "none") || "none";
+  const [menu, setMenu] = useState<"breakfast" | "lunch" | "none">(initialMenu);
 
+  const changeMenu = (menu: "breakfast" | "lunch" | "none") => {
+    setMenu(menu);
+    //elimina parametro menu (breakfast,lunch)
+    queryParams.delete("menu");
+    //reestablece parametros si es diferente a none
+    if (menu !== "none") {
+      queryParams.set("menu", menu);
+    }
+    //set: establece valor del parametro menu con el valor del estado menu
 
- const changeMenu = (menu: "breakfast" | "lunch" | "none") => {
-setMenu(menu)
- }
+    navigate({
+      search: queryParams.toString(),
+    });
+  };
+  //actualiza el estado cuando los parámetros de consulta cambian.
+  useEffect(() => {
+    // Actualiza el estado si el parámetro de consulta cambia
+    const updatedMenu = queryParams.get("menu") || "none";
+    setMenu(updatedMenu as "breakfast" | "lunch" | "none");
+  }, [location.search]);
+
+  const addProduct = (product: string) => {
+    setSelectedProducts([...selectedProducts, product]);
+  };
 
   return (
     <>
@@ -25,16 +49,18 @@ setMenu(menu)
         <div className={style.containerElectionProduct}>
           <ElectionMenu onMenuChange={changeMenu} />
           {menu === "breakfast" ? (
-            <ListProductBreakfast />
+            <ListProductBreakfast addProduct={addProduct} />
           ) : menu === "lunch" ? (
             <ListElectionLunch />
-            ) : (
-              <ProductMenu />
-            )}
-
+          ) : (
+            <ProductMenu />
+          )}
         </div>
         <div>
-          <ListProductClient tableNumber={tableNumber} />
+          <ListProductClient
+            products={selectedProducts}
+            tableNumber={tableNumber}
+          />
         </div>
       </div>
     </>

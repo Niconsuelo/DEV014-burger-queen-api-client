@@ -1,24 +1,90 @@
 @import "../App.scss";
 
 .detailsProductClient {
-    background-color: $primary-color;
-    height: 100%;
-    line-height: 1.5;
-  }
+  background-color: $primary-color;
 
-  .textOptionClient {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 14px;
-    padding-right: 7px;
+  line-height: 1.5;
+  
+}
+
+.textOptionClient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 14px;
+  padding-right: 7px;
+}
+
+.textContainerListClient {
+  font-family: $font-family-primery;
+  font-size: smaller;
+  font-weight: 700;
+}
+
+
+.textDetailsClient {
+  line-height: 0;
+}
+
+.productContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Ajusta según sea necesario */
+}
+
+.textDetailsClientProduct {
+
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  max-width: 100px; 
+  white-space: nowrap;
+  //overflow: hidden;
+  margin-right: 1rem; /* Añadir margen derecho para separar del icono */
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre los iconos */
+  margin: 0px 16px 0px 0px;
+}
+
+.icon {
+  cursor: pointer;
+  color: #333; /* Color de los iconos */
+  transition: color 0.3s;
+  height: 25px;
+
+  &:hover {
+    color: $background-primary-color; /* Color al pasar el mouse sobre los iconos */
   }
-  .textContainerListClient {
-    font-family: $font-family-primery;
-    font-size: smaller;
-    font-weight: 700;
-    padding-left: 14px;
+}
+
+.iconDelete {
+  cursor: pointer;
+  color: #333; /* Color de los iconos */
+  transition: color 0.3s;
+  height: 25px;
+
+  &:hover {
+    color: $background-primary-color; /* Color al pasar el mouse sobre los iconos */
   }
-  .textDetailsClient{
-    line-height: 0;
+}
+
+.containerIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem; /* Espacio entre los iconos */
+}
+
+.iconNote{
+  cursor: pointer;
+  color: #333; /* Color de los iconos */
+  transition: color 0.3s;
+  height: 25px;
+
+  &:hover {
+    color: $background-primary-color; /* Color al pasar el mouse sobre los iconos */
   }
+}
