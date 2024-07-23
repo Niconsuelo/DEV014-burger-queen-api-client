@@ -19,10 +19,14 @@
 .textOption {
   font-size: 30px;
   color: $secundary-color;
+  display: flex;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
   font-family: $font-family-primery;
   margin: 23px 0px 23px 0px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .optionNav:hover {
@@ -64,17 +68,17 @@
   font-family: $font-family-primery;
   margin: 15px;
   font-weight: bold;
-  font-size: $font-size-button ;
+  font-size: $font-size-button;
 }
 
-.buttonBackNavBar{
+.buttonBackNavBar {
   margin: 0% 55% 0% 0%;
 }
 
-.buttonExitNavBar{
-height: 45px;
-width: 140px;
-font-weight: bold;
-font-family: $font-family-primery;
-font-size: medium;
+.buttonExitNavBar {
+  height: 45px;
+  width: 140px;
+  font-weight: bold;
+  font-family: $font-family-primery;
+  font-size: medium;
 }

@@ -3,6 +3,7 @@ import Login from "../components/Login";
 import ModalLogin from "../components/ModalLogin";
 import ValidationEmail from "../models/ValidationEmail";
 import { useNavigate } from "react-router-dom";
+import { login } from "../services/APIService";
 
 const validateEmail = ({ email }: ValidationEmail): boolean => {
   // La dirección debe contener exactamente una '@' y separa
@@ -40,7 +41,8 @@ const LoginPage: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const navigateTo = useNavigate();
 
-  const sesionLogin = () => {
+    //lee la solicitud y no se detiene para completar
+  const sesionLogin = async () => {
     if (email === "" && password === "") {
       console.log("error de datos");
       setError(
@@ -65,14 +67,27 @@ const LoginPage: React.FC = () => {
       setIsModalVisible(true);
       return;
     }
-    setError('');
-    setIsModalVisible(true);
-    navigateTo("/table-order");
-    /*
+
+    try {
+      //espera a que apiService complete la solicitud de autenticación y devuelva el token.
+      const token = await login(email, password); // Llamar a la función de autenticación y obtener el token
+      //almacena el token en el navegador
+      //token disponible para futuras solicitudes
+      localStorage.setItem("token", token); // Almacenar el token en localStorage
+      setError("");
+      setIsModalVisible(false);
+      navigateTo("/table-order");
+      //si la api devuelve un error
+    } catch (err) {
+      setError("Error en la autenticación");
+      setIsModalVisible(true);
+    }
+  };
+
+  /*
   setError('');
   setIsModalVisible(false)
   */
-  };
 
   const clickCloseModal = () => {
     setIsModalVisible(false);

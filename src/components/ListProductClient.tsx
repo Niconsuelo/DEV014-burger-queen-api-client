@@ -3,21 +3,32 @@ import BannerListProductClient from "./BannerListProductClient";
 import BannerNumberClient from "./BannerNumberClient";
 import ButtonAccess from "./ButtonAccess";
 import UnitProductDetails from "./UnitProductDetails";
+import ScrollToBottom from "react-scroll-to-bottom";
 
-interface ListProducClientProps{
+interface ListProducClientProps {
   tableNumber?: string | null;
+  products: string[];
 }
 
-
-const ListProducClient: React.FC<ListProducClientProps> = ({tableNumber}) => {
+const ListProducClient: React.FC<ListProducClientProps> = ({
+  tableNumber,
+  products,
+}) => {
   return (
     <>
       <div className={style.containerListClient}>
-      <BannerNumberClient tableNumber={tableNumber  ?? 'No hay número de mesa'}/>
+        <BannerNumberClient
+          tableNumber={tableNumber ?? "No hay número de mesa"}
+        />
         <div className={style.nameProductClient}>
-         <BannerListProductClient/>
+          <BannerListProductClient />
         </div>
-        <UnitProductDetails />
+
+        <ScrollToBottom className={style.scrollProductClient}>
+          {products.map((product, index) => (
+            <UnitProductDetails key={index} product={product} />
+          ))}
+        </ScrollToBottom>
 
         <div className={style.totalPriceClient}>
           <section className={style.textTotalPrice}>

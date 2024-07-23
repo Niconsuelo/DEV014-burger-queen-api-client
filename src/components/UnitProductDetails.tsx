@@ -1,24 +1,57 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "../styles/UnitProductDetails.module.scss";
+import {
+  faPenToSquare,
+  faPlusCircle,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
-const UnitProductDetails: React.FC = () => {
+interface UnitProductDetailsProps{
+  product: string;
+}
+
+
+
+const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({product}) => {
+  const deleteButton = () => {
+    console.log("producto eliminado");
+  };
+
+  const addButton = () => {
+    console.log("producto añadido");
+  };
   return (
     <>
       <div className={style.detailsProductClient}>
         <section
           className={`${style.textOptionClient} ${style.textContainerListClient}`}
         >
-          <p className={style.textDetailsClient}>1</p>
-          <p className={style.textDetailsClient}>GASEOSA</p>
-          <p className={style.textDetailsClient}>X X X</p>
-          <p className={style.textDetailsClient}>$7</p>
-        </section>
-        <section
-          className={`${style.textOptionClient} ${style.textContainerListClient}`}
-        >
-          <p className={style.textDetailsClient}>1</p>
-          <p className={style.textDetailsClient}>GASEOSA</p>
-          <p className={style.textDetailsClient}>X X X</p>
-          <p className={style.textDetailsClient}>$7</p>
+          <div className={style.productContainer}>
+            <p className={style.textDetailsClient}>1</p>
+
+            <p className={style.textDetailsClientProduct}>{product}</p>
+            <div className={style.containerIcon}>
+              <FontAwesomeIcon
+                icon={faPlusCircle}
+                className={style.icon}
+                onClick={addButton}
+                title="Añadir"
+              />
+              <FontAwesomeIcon
+                icon={faTrashAlt}
+                className={style.iconDelete}
+                onClick={deleteButton}
+                title="Eliminar"
+              />
+              <FontAwesomeIcon
+                icon={faPenToSquare}
+                className={style.iconNote}
+                onClick={addButton}
+                title="Añadir"
+              />
+            </div>
+            <div className={style.textDetailsClientPrice}>$ VALOR</div>
+          </div>
         </section>
       </div>
     </>

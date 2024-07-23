@@ -6,8 +6,8 @@ const BannerListProductClient: React.FC = () => {
             className={`${style.textOptionClient} ${style.textContainerListClient}`}
           >
             <p className={style.textContainerListClient}>Nº</p>
-            <p className={style.textContainerListClient}>PRODUCTO</p>
-            <p className={style.textContainerListClient}>EDITAR</p>
+            <p className={style.textDetailsClientProduct}>PRODUCTO</p>
+            <p className={style.textContainerListClientEdit}>EDITAR</p>
             <p className={style.textContainerListClient}>VALOR</p>
           </section>
     );

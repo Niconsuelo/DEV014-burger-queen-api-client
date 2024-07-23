@@ -1,21 +1,28 @@
 @import "../App.scss";
 
 .textOptionClient {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 14px;
-    padding-right: 7px;
-    font-family: $font-family-primery;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 14px;
+  padding-right: 7px;
+  font-family: $font-family-primery;
+}
 
-  .containerListClient {
-    height: 512px;
-    width: 450px;
-    background-color: $primary-color;
-    border-radius: $border-radius-primery;
-    display: flex;
-    flex-direction: column;
-    border-color: $primary-color;
-    border-style: solid;
-  }
+.containerListClient {
+  height: 512px;
+  width: 450px;
+  background-color: $primary-color;
+  border-radius: $border-radius-primery;
+  display: flex;
+  flex-direction: column;
+  border-color: $primary-color;
+  border-style: solid;
+}
+.textDetailsClientProduct {
+  line-height: 0;
+  margin: 26px 77px 0px 48px;
+}
+.textContainerListClientEdit {
+  padding-right: 60px;
+}
