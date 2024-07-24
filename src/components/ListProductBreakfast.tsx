@@ -1,74 +1,33 @@
+import Product from "../models/Product";
 import style from "../styles/ListProductBreakfast.module.scss";
 
 interface ListProductBreakfastProps {
   addProduct: (product: string) => void;
+  products: Product[];
 }
 
 const ListProductBreakfast: React.FC<ListProductBreakfastProps> = ({
   addProduct,
+  products,
 }) => {
   return (
-    <>
-      <div className={style.containerListProductBreakfast}>
-        <section className={style.sectionLeft}>
-          <div className={style.electionProduct}>
+    <div className={style.containerListProductBreakfast}>
+    
+        {products.map((product) => (
+          <div className={style.electionProductList} key={product.id}>
             <button
               className={style.buttonProduct}
-              onClick={() => addProduct("CAFÉ AMERICANO")}
+              onClick={() => addProduct(product.name)}
             >
               <div className={style.containerText}>
-                <h2 className={style.textElectionProduct}>CAFÉ AMERICANO</h2>
-                <p className={style.textPrice}>$5</p>
+                <h2 className={style.textElectionProduct}>{product.name}</h2>
+                <p className={style.textPrice}>${product.price}</p>
               </div>
             </button>
           </div>
-
-          <div className={style.electionProduct}>
-            <button
-              className={style.buttonProduct}
-              onClick={() => addProduct("SANDWICH JAMÓN QUESO")}
-            >
-              <div className={style.containerText}>
-                <h2 className={style.textElectionProduct}>
-                  SANDWICH JAMÓN QUESO
-                </h2>
-                <p className={style.textPrice}>$7</p>
-              </div>
-            </button>
-          </div>
-        </section>
-
-        <section className={style.sectionRight}>
-          <div className={style.electionProduct}>
-            <button
-              className={style.buttonProduct}
-              onClick={() => addProduct("CAFÉ CON LECHE")}
-            >
-              <div className={style.containerText}>
-                <h2 className={style.textElectionProduct}>CAFÉ CON LECHE</h2>
-                <p className={style.textPrice}>$7</p>
-              </div>
-            </button>
-          </div>
-
-          <div className={style.electionProduct}>
-            <button
-              className={style.buttonProduct}
-              onClick={() => addProduct("JUGO DE FRUTA NATURAL")}
-            >
-              <div className={style.containerText}>
-                <h2 className={style.textElectionProduct}>
-                  JUGO DE FRUTA NATURAL{" "}
-                </h2>
-                <p className={style.textPrice}>$10</p>
-              </div>
-            </button>
-          </div>
-        </section>
-
-        <div className={style.containerProductBreakfast}></div>
-      </div>
-    </>
+        ))}
+    </div>
   );
 };
+
 export default ListProductBreakfast;

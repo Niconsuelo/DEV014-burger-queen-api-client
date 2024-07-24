@@ -12,12 +12,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 20px; /* Espacio entre los elementos */
+
 
   @include desktop {
     width: 100%;
+
   }
+}
+.electionProductList{
+
+  margin: 10px;
+
+ 
 }
 
 .buttonProduct {
@@ -42,6 +48,7 @@
   font-family: $font-family-primery;
   font-size: medium;
   margin: 0;
+  text-transform: uppercase;
 }
 .textPrice {
   color: $primary-color;

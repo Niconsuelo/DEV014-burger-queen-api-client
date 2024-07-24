@@ -20,3 +20,4 @@ export const login = async (
   const data = await response.json();
   return data.token; // Asegúrate de que el token es lo que devuelve tu API
 };
+
