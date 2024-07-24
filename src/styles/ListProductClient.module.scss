@@ -44,6 +44,7 @@
   background-color: $secundary-color;
   height: 76px;
   border-radius: 0px 0px 10px 10px;
+  position: sticky;
 }
 
 .textContainerListClient {
@@ -54,8 +55,9 @@
 }
 
 .scrollProductClient {
-  flex: 1; /* Hace que el contenedor de productos ocupe el espacio disponible */
-  max-height: 100%; /* Se asegura de que ocupe el espacio restante */
-  overflow-y: auto; /* Añade scroll vertical si es necesario */
-  overflow-x: hidden; /* Opcional: Evita el scroll horizontal */
+  flex: 1;
+  max-height: 100%;
+  overflow-y: auto; /*scroll vertical*/
+  overflow-x: hidden; /*Evita el scroll horizontal */
+  scroll-behavior: smooth;
 }

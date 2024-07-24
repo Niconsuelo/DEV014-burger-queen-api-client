@@ -3,9 +3,9 @@ import BannerListProductClient from "./BannerListProductClient";
 import BannerNumberClient from "./BannerNumberClient";
 import ButtonAccess from "./ButtonAccess";
 import UnitProductDetails from "./UnitProductDetails";
-import ScrollToBottom from "react-scroll-to-bottom";
 
 interface ListProducClientProps {
+
   tableNumber?: string | null;
   products: string[];
 }
@@ -24,11 +24,12 @@ const ListProducClient: React.FC<ListProducClientProps> = ({
           <BannerListProductClient />
         </div>
 
-        <ScrollToBottom className={style.scrollProductClient}>
+
+        <div className={style.scrollProductClient}>
           {products.map((product, index) => (
             <UnitProductDetails key={index} product={product} />
           ))}
-        </ScrollToBottom>
+        </div>
 
         <div className={style.totalPriceClient}>
           <section className={style.textTotalPrice}>

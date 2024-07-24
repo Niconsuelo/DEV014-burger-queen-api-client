@@ -20,6 +20,10 @@ const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({product}) => {
   const addButton = () => {
     console.log("producto añadido");
   };
+
+  const editButton = () => {
+    console.log("producto modificado")
+  }
   return (
     <>
       <div className={style.detailsProductClient}>
@@ -46,8 +50,8 @@ const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({product}) => {
               <FontAwesomeIcon
                 icon={faPenToSquare}
                 className={style.iconNote}
-                onClick={addButton}
-                title="Añadir"
+                onClick={editButton}
+                title="Modificar"
               />
             </div>
             <div className={style.textDetailsClientPrice}>$ VALOR</div>

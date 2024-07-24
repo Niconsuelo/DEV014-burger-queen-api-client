@@ -16,7 +16,7 @@ const NumberOrderTable: React.FC<NumberOrderTableProps> = ({ inputValue, onInput
   return (
     <div className={style.containerOrder}>
       <div className={style.containerInputOrder}>
-        <p className={style.orderTitle}>INGRESA Nº MESA</p>
+        <p className={style.orderTitle}>INGRESA Nº CLIENTE</p>
         <InputText type="text" id="text" value={inputValue} onChange={onInputChange} />
         <ButtonAccess buttonText="INGRESAR" className="buttonLogin" onClick={onButtonClick}/>
 
