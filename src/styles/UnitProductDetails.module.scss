@@ -4,7 +4,6 @@
   background-color: $primary-color;
 
   line-height: 1.5;
-  
 }
 
 .textOptionClient {
@@ -21,7 +20,6 @@
   font-weight: 700;
 }
 
-
 .textDetailsClient {
   line-height: 0;
 }
@@ -29,18 +27,19 @@
 .productContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%; /* Ajusta según sea necesario */
 }
 
 .textDetailsClientProduct {
-
-  line-height: 1.5;
+  line-height: 2.5;
   text-overflow: ellipsis;
-  max-width: 100px; 
+  max-width: 100px;
   white-space: nowrap;
   //overflow: hidden;
   margin-right: 1rem; /* Añadir margen derecho para separar del icono */
+  text-transform: uppercase;
+  margin: 0px 104px 0px 28px;
+  font-size: 13px;
 }
 
 .iconContainer {
@@ -78,7 +77,7 @@
   gap: 0.5rem; /* Espacio entre los iconos */
 }
 
-.iconNote{
+.iconNote {
   cursor: pointer;
   color: #333; /* Color de los iconos */
   transition: color 0.3s;
@@ -87,4 +86,8 @@
   &:hover {
     color: $background-primary-color; /* Color al pasar el mouse sobre los iconos */
   }
+}
+.textDetailsClientPrice{
+  margin: 0px 0px 0px 23px;
+  font-size: 15px;
 }

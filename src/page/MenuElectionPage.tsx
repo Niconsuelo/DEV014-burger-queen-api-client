@@ -7,6 +7,7 @@ import ListProductBreakfast from "../components/ListProductBreakfast";
 import { useEffect, useState } from "react";
 import ListElectionLunch from "../components/ListElectionLunch";
 import Product from "../models/Product";
+import SelectedProduct from "../models/SelectedProduct";
 
 const mockProduct: Product[] = [
   {
@@ -45,6 +46,15 @@ const mockProduct: Product[] = [
     type: "breakfast",
     dateEntry: "2022-03-05 15:14:10",
   },
+  {
+    id: 5,
+    name: "Hamburguesa simple",
+    price: 10,
+    image:
+      "https://github.com/Laboratoria/bootcamp/tree/main/projects/04-burger-queen-api/resources/images/water.jpg",
+    type: "",
+    dateEntry: "2022-03-05 15:14:10",
+  },
 ];
 
 const MenuElectionPage: React.FC = () => {
@@ -52,7 +62,9 @@ const MenuElectionPage: React.FC = () => {
   const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const tableNumber = queryParams.get("tableNumber") ?? undefined;
-  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+  const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>(
+    []
+  );
   //useNavigate permite cambiaar la url programaticamente.
 
   const initialMenu =
@@ -85,20 +97,27 @@ const MenuElectionPage: React.FC = () => {
   //destructuring obtengo todos elementos del arreglo
   //rompe arreglo para crear un e¡objeto en otro espacio de memoria
 
-  //buscar producto antes de agrergar para ver si eixiste en el listado
-  // si existe, la cantidad (atributo) +1
-  //no se agrerga, se setea setSelectedProducts
-  // si es 0 se elimina del producto
-
-  //permite agregar al carrito
+  //comprueba si el rpoducto existe en la lista de producto seleccionado
   const addProduct = (product: string) => {
-    const exitProduct = selectedProducts.find((e) => e === product);
-    if (!exitProduct) {
-      console.log("producto existe");
-    } else {
-      console.log("producto no existe");
-    }
-    setSelectedProducts([...selectedProducts, product]);
+    setSelectedProducts((ExistProducts) => {
+      //si existe un producto en arreglo ExistProducts
+      //enceuntra el primer producto en ExistProducts que tenga el mismo nombre que el producto seleccionado.
+      const existingProduct = ExistProducts.find((e) => e.name === product);
+      //si el producto existe en la lista
+      if (existingProduct) {
+        //actualiza nº
+        return ExistProducts.map((e) =>
+          //si producto coincide con el producto seleccionado
+          //crea nuevo objeto, copia de e pero con quatity +1
+          //si no encuentra coincidencia, e queda sin cambios
+          e.name === product ? { ...e, quantity: e.quantity + 1 } : e
+        );
+      } else {
+        //si no existe producto, añade el producto con cantidad inicial 1
+        //queda un array con productos anteriores mas el objeto con 1
+        return [...ExistProducts, { name: product, quantity: 1 }];
+      }
+    });
   };
 
   const breakfastProduct = mockProduct.filter(
@@ -126,6 +145,7 @@ const MenuElectionPage: React.FC = () => {
           <ListProductClient
             products={selectedProducts}
             tableNumber={tableNumber}
+            addProduct={addProduct}
           />
         </div>
       </div>
