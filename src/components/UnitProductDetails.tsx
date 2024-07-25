@@ -1,29 +1,34 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "../styles/UnitProductDetails.module.scss";
 import {
+  faCircleMinus,
   faPenToSquare,
   faPlusCircle,
-  faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-interface UnitProductDetailsProps{
+interface UnitProductDetailsProps {
   product: string;
+  quantity: number;
+  onAdd: (product: string) => void;
 }
 
-
-
-const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({product}) => {
+const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({
+  product,
+  quantity,
+  onAdd
+}) => {
   const deleteButton = () => {
     console.log("producto eliminado");
   };
 
   const addButton = () => {
+    onAdd(product)
     console.log("producto añadido");
   };
 
   const editButton = () => {
-    console.log("producto modificado")
-  }
+    console.log("producto modificado");
+  };
   return (
     <>
       <div className={style.detailsProductClient}>
@@ -31,7 +36,7 @@ const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({product}) => {
           className={`${style.textOptionClient} ${style.textContainerListClient}`}
         >
           <div className={style.productContainer}>
-            <p className={style.textDetailsClient}>1</p>
+            <p className={style.textDetailsClient}>{quantity}</p>
 
             <p className={style.textDetailsClientProduct}>{product}</p>
             <div className={style.containerIcon}>
@@ -42,7 +47,7 @@ const UnitProductDetails: React.FC<UnitProductDetailsProps> = ({product}) => {
                 title="Añadir"
               />
               <FontAwesomeIcon
-                icon={faTrashAlt}
+                icon={faCircleMinus}
                 className={style.iconDelete}
                 onClick={deleteButton}
                 title="Eliminar"

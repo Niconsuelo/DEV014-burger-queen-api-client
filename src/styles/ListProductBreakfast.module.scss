@@ -13,17 +13,12 @@
   flex-wrap: wrap;
   justify-content: center;
 
-
   @include desktop {
     width: 100%;
-
   }
 }
-.electionProductList{
-
+.electionProductList {
   margin: 10px;
-
- 
 }
 
 .buttonProduct {
@@ -41,6 +36,7 @@
 
 .containerText {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .textElectionProduct {
@@ -48,7 +44,7 @@
   font-family: $font-family-primery;
   font-size: medium;
   margin: 0;
-  text-transform: uppercase;
+
 }
 .textPrice {
   color: $primary-color;

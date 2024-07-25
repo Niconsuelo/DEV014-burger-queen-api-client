@@ -12,7 +12,7 @@ const BannerNumberClient: React.FC<BannerNumberClientProps> = ({tableNumber}) =>
 
 <section className={style.numberClientContainer}>
 <p className={style.textOrderTableClient}>Nº CLIENTE:</p>
-<p className={style.textOrderTable}>MESA: {tableNumber}</p>
+<p className={style.textOrderTable}>{tableNumber}</p>
 </section>
 
 );
